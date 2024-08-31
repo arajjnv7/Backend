@@ -3,18 +3,28 @@ const express = require('express')
 const app = express()
 PORT = 5000;
 
-
+const user = [
+    {
+        "name": 'Aryan Raj',
+        "email": 'arajjnv7@gmail.com'
+    },
+    {
+        "name": 'Anushka Joshi',
+        "email": 'anushkajoshi999@gmail.com'
+    }
+    
+]
 
 
 app.get('/', (req, res) => {
-    res.send("HEllo")
+    res.send("Welcome to API")
 })
 
 app.get('/login', (req, res) => {
-    res.send('<h1>Chutiya</h1>')
+    res.send('Hello Chutiye')
 })
-app.get('/anushka', (req, res) => {
-    res.send('I love you Anushka')
+app.get('/user', (req, res) => {
+    res.json(user)
 })
 
 
